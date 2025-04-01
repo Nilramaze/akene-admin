@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kategoriens",
+  "info": {
+    "singularName": "kategorien",
+    "pluralName": "kategoriens",
+    "displayName": "Kategorien"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "buttoncolor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "subkategorien": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subkategorien.subkategorien",
+      "inversedBy": "kategoriens"
+    }
+  }
+}
