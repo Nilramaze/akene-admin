@@ -504,6 +504,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiKategorienKategorien extends Struct.CollectionTypeSchema {
   collectionName: 'kategoriens';
   info: {
+    description: '';
     displayName: 'Kategorien';
     pluralName: 'kategoriens';
     singularName: 'kategorien';
@@ -521,6 +522,7 @@ export interface ApiKategorienKategorien extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    ItemID: Schema.Attribute.UID;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "kategorien",
     "pluralName": "kategoriens",
-    "displayName": "Kategorien"
+    "displayName": "Kategorien",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,20 +21,24 @@
       "customField": "plugin::color-picker.color"
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "subkategorien": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::subkategorien.subkategorien",
       "inversedBy": "kategoriens"
+    },
+    "ItemID": {
+      "type": "uid"
     }
   }
 }
