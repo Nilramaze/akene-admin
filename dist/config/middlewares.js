@@ -8,7 +8,7 @@ exports.default = [
         name: 'strapi::cors',
         config: {
             origin: ['http://localhost:1337', 'http://akene.test-gait.de', 'https://akene.test-gait.de', 'http://localhost:5173'], // Erlaube deine Domains
-            methods: ['GET', 'POST', 'PUT', 'DELETE'],
+            methods: ['*'],
             headers: ['Content-Type', 'Authorization'],
         },
     },
