@@ -1,0 +1,43 @@
+{
+    "kind": "collectionType",
+    "collectionName": "kategorien",
+    "info": {
+        "singularName": "kategorie",
+        "pluralName": "kategorien",
+        "displayName": "Kategorien",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Titel": {
+            "type": "string"
+        },
+        "Farbe": {
+            "type": "customField",
+            "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+            "customField": "plugin::color-picker.color"
+        },
+        "Bild": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "klasses": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::klasse.klasse"
+        },
+        "Desc": {
+            "type": "richtext"
+        }
+    }
+}
