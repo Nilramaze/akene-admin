@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kuenstlers",
+  "info": {
+    "singularName": "kuenstler",
+    "pluralName": "kuenstlers",
+    "displayName": "Künstler",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Adresse": {
+      "displayName": "Adresse",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.adresse"
+    },
+    "Portrait": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Fokuskuenstler": {
+      "type": "boolean"
+    }
+  }
+}

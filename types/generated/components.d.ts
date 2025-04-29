@@ -1,5 +1,38 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedAdresse extends Struct.ComponentSchema {
+  collectionName: 'components_shared_adresses';
+  info: {
+    description: '';
+    displayName: 'Adresse';
+  };
+  attributes: {
+    Anschrift: Schema.Attribute.String;
+    Bundesland: Schema.Attribute.Enumeration<
+      [
+        '    BadenWuerttemberg',
+        '    Bayern',
+        '    Berlin',
+        '    Brandenburg',
+        '    Bremen',
+        '    Hamburg',
+        '    Hessen',
+        '    MecklenburgVorpommern',
+        '    Niedersachsen',
+        '    NordrheinWestfalen',
+        '    RheinlandPfalz',
+        '    Saarland',
+        '    Sachsen',
+        '    SachsenAnhalt',
+        '    SchleswigHolstein',
+        '    Thueringen',
+      ]
+    >;
+    Ort: Schema.Attribute.String;
+    Postleitzahl: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -65,6 +98,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.adresse': SharedAdresse;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

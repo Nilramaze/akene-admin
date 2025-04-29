@@ -1,0 +1,40 @@
+{
+    "collectionName": "components_shared_adresses",
+    "info": {
+        "displayName": "Adresse",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "Anschrift": {
+            "type": "string"
+        },
+        "Postleitzahl": {
+            "type": "string"
+        },
+        "Ort": {
+            "type": "string"
+        },
+        "Bundesland": {
+            "type": "enumeration",
+            "enum": [
+                "    BadenWuerttemberg",
+                "    Bayern",
+                "    Berlin",
+                "    Brandenburg",
+                "    Bremen",
+                "    Hamburg",
+                "    Hessen",
+                "    MecklenburgVorpommern",
+                "    Niedersachsen",
+                "    NordrheinWestfalen",
+                "    RheinlandPfalz",
+                "    Saarland",
+                "    Sachsen",
+                "    SachsenAnhalt",
+                "    SchleswigHolstein",
+                "    Thueringen"
+            ]
+        }
+    }
+}
